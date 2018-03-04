@@ -82,6 +82,7 @@ a {
 	    .title-description {
 	        font-size: 13px;
 		    max-width: 500px;
+		    padding: 0 15px;
 	    }
     }
 }
@@ -93,6 +94,12 @@ a {
 	max-width: 1600px;
 	margin: 0 auto;
 	padding-bottom: 60px;
+	@include mx(1280) {
+		padding-bottom: 50px;
+	}
+	@include mx(768) {
+		padding-bottom: 87px;
+	}
 }
 /*header-container*/
 .small-container {
@@ -100,7 +107,7 @@ a {
 	max-width: 1150px;
 	margin: 0 auto;
 	@include mx(1280) {
-		padding: 0 10px;
+		padding: 0 30px;
 	}
 }
 
