@@ -53,12 +53,12 @@ $(document).ready(function () {
                 target = $(hash);
             if (target.position().top <= scrollTop &&  target.position().top + target.outerHeight() > scrollTop) {
                 $('.header-nav li.active').removeClass('active');
-                $(this).parent('li').addClass('active');
+                $(this).parent('li').addClass('active-li');
 			    if (hash == '#about') {
 			    	$('.progress-line').addClass('active');
 			    }
             } else {
-                $(this).parent('li').removeClass('active');
+                $(this).parent('li').removeClass('active-li');
             }
         });
         if ($(window).scrollTop() > 100) {

@@ -179,7 +179,7 @@
 		& + li {
 			margin: 0 0 0 45px;
 		}
-		&.active {
+		&.active-li {
 			a {
 				font-family: $bold;
 			}
@@ -535,8 +535,8 @@
 			& + li {
 				margin: 15px 0 0 0;
 			}
-			&.active {
-				a {
+			&.active-li {
+				& > a {
 					color: $blue;
 				}
 			}
