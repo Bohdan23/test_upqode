@@ -535,6 +535,11 @@
 			& + li {
 				margin: 15px 0 0 0;
 			}
+			&.active {
+				a {
+					color: $blue;
+				}
+			}
 		}
 		a {
 			font-size: 17px;
