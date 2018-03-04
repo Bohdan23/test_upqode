@@ -1,0 +1,162 @@
+@import "../helpers/_fonts.scss";
+@import "../helpers/_variables.scss";
+
+.about {
+
+	width: 100%;
+	padding: 70px 0;
+    & > .small-container {
+	    display: flex;
+    }
+    .title-wrapper {
+    	margin-bottom: 55px;
+    }
+	.side {
+		width: 50%;
+		height: auto;
+	}
+	.right-side {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: auto;
+			max-width: 100%;
+		}
+	}
+	.info-text {
+		line-height: 1.71;
+	}
+	.progress-wrapper {
+		margin-top: 65px;
+		.progress-block {
+			margin-bottom: 30px;
+			p {
+				color: #444444;
+				font-size: 13px;
+				font-family: $bold;
+				text-transform: uppercase;
+				display: flex;
+				justify-content: space-between;
+				.progress-block__name {
+					text-transform: uppercase;
+				}
+			}
+			.progress-box {
+				width: 100%;
+				height: 9px;
+				border: 1px solid #dddddd;
+				padding: 2px;
+				margin-top: 12px;
+				.progress-line {
+					display: block;
+					width: 0;
+					max-width: auto;
+					height: 100%;
+					background-color: #009dda;
+					transition: width 2s ease-in-out, max-width 2s ease-in-out;
+					&.active {
+						width: 100%;
+					}
+				}
+			}
+			.photoshop-box {
+				.progress-line {
+					max-width: 79%;
+				}
+			}
+			.html-box {
+				.progress-line {
+					max-width: 90%;
+				}
+			}
+			.js-box {
+				.progress-line {
+					max-width: 69%;
+				}
+			}
+			.wordpress-box {
+				.progress-line {
+					max-width: 92%;
+				}
+			}
+		}
+	}
+	@include mx(1500) {
+	    .title-wrapper {
+	    	margin-bottom: 40px;
+	    }
+		.right-side {
+			padding: 0 11%;
+		}
+		.progress-wrapper {
+			margin-top: 50px;
+			.progress-block {
+				margin-bottom: 25px;
+				p {
+					font-size: 12px;
+				}
+				.progress-box {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	@include mx(1280) {
+		padding: 60px 0;
+	    .title-wrapper {
+	    	margin-bottom: 30px;
+	    }
+		.right-side {
+			padding: 0 12%;
+		}
+		.info-text {
+			line-height: 1.6;
+			font-size: 13px;
+		}
+		.progress-wrapper {
+			margin-top: 45px;
+			.progress-block {
+				margin-bottom: 20px;
+				p {
+					font-size: 11px;
+				}
+				.progress-box {
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+	@include mx(1024) {
+		padding: 50px 0;
+		& > .small-container {
+		    display: block;
+	    }
+	    .side {
+	    	width: 100%;
+	    }
+	    .title-wrapper {
+	    	margin-bottom: 30px;
+	    	text-align: center;
+	    	.title-description {
+	    		margin: 0 auto;
+	    	}
+	    }
+		.right-side {
+			padding: 0;
+			img {
+				width: 200px;
+			}
+		}
+		.info-text {
+			text-align: center;
+			max-width: 800px;
+		    margin: 0 auto;
+		    padding: 0 20px;
+		}
+		.progress-wrapper {
+			margin: 45px auto 0 auto;
+			max-width: 600px;
+		}
+	}
+}

@@ -1,0 +1,118 @@
+@import "helpers/_reset.scss";
+@import "helpers/_fonts.scss";
+@import "helpers/_variables.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+
+body { 
+	min-width: 320px;
+	font-family: $regular;
+	font-size: 14px;
+	color: #373737;
+}
+
+a { 
+	text-decoration: none;
+}
+
+/*Centering*/
+.centr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/*color classes*/
+.yellow {
+    color: $yellow;
+}
+
+.blue {
+    color: $blue;
+}
+
+/*Main titles*/
+.title-wrapper {
+    text-align: center;
+    &.left {
+        text-align: left;
+        .title-description {
+            margin: 0;
+        }
+    }
+    .title {
+        font-family: $bold;
+        font-size: 34px;
+        color: #373737;
+        margin: 0 0 25px 0;
+        text-transform: uppercase;
+    }
+    .title-description {
+        color: $grey;
+        font-size: 14px;
+        line-height: 1.71;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    @include mx(1500) {
+    	.title {
+	        font-size: 32px;
+	        margin: 0 0 20px 0;
+	    }
+    }
+    @include mx(1280) {
+    	.title {
+	        font-size: 30px;
+	        margin: 0 0 16px 0;
+	    }
+	    .title-description {
+	        line-height: 1.6;
+	        max-width: 600px;
+	    }
+    }
+    @include mx(1024) {
+    	.title {
+	        font-size: 26px;
+	        margin: 0 0 13px 0;
+	    }
+	    .title-description {
+	        font-size: 13px;
+		    max-width: 500px;
+	    }
+    }
+}
+
+
+/*main-container*/
+.container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding-bottom: 60px;
+}
+/*header-container*/
+.small-container {
+	width: 100%;
+	max-width: 1150px;
+	margin: 0 auto;
+	@include mx(1280) {
+		padding: 0 10px;
+	}
+}
+
+.wrapper {
+	position: relative;
+	background: #fff;
+	z-index: 10;
+}
+
+
+@import "parts/_header.scss";
+@import "parts/_choose.scss";
+@import "parts/_about.scss";
+@import "parts/_contacts.scss";
+@import "parts/_footer.scss";
